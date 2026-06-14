@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-canvas: #080704;
+  --color-primary: #e8a020;
+  --color-on-primary: #0f0d0a;
+  --color-primary-hover: #f5bc4a;
+  --color-primary-focus: #c4870e;
+  --color-ink: #f5f0e8;
+  --color-ink-muted: #cec5b5;
+  --color-ink-subtle: #8a7f70;
+  --color-surface-1: #110f0c;
+  --color-surface-2: #161310;
+  --color-hairline: #2a2520;
+  --color-hairline-strong: #3d3628;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.35s ease-out both;
+}
+
+.animate-fade-up-delay-1 { animation-delay: 0.05s; }
+.animate-fade-up-delay-2 { animation-delay: 0.10s; }
+.animate-fade-up-delay-3 { animation-delay: 0.15s; }
+.animate-fade-up-delay-4 { animation-delay: 0.20s; }
+.animate-fade-up-delay-5 { animation-delay: 0.25s; }
+.animate-fade-up-delay-6 { animation-delay: 0.30s; }
+.animate-fade-up-delay-7 { animation-delay: 0.35s; }
+.animate-fade-up-delay-8 { animation-delay: 0.40s; }
