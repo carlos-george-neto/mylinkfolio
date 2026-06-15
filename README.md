@@ -38,7 +38,7 @@ Edit one file. Build. Deploy. Done.
 ### Install
 
 ```bash
-git clone https://github.com/your-username/mylinkfolio.git
+git clone https://github.com/carlos-george-neto/mylinkfolio.git
 cd mylinkfolio
 npm install
 ```
@@ -86,7 +86,7 @@ theme: {
 meta: {
   title:       'Your Name | Links',
   description: 'All my links in one place.',
-  siteUrl:     'https://yourusername.github.io/mylinkfolio/',
+  siteUrl:     'https://carlos-george-neto.github.io/mylinkfolio/',
   basePath:    '/mylinkfolio/',
 },
 ```
@@ -119,11 +119,63 @@ Open `http://localhost:5173` to preview your page. Changes to `src/config.ts` re
 
 ### GitHub Pages
 
-1. Push the repo to GitHub.
-2. Set `meta.basePath` in `config.ts` to `'/your-repo-name/'`.
-3. Run `npm run deploy` — this builds and pushes `dist/` to the `gh-pages` branch.
-4. In your repo: **Settings → Pages → Branch → `gh-pages` / `/ (root)` → Save**.
-5. Your page is live at `https://yourusername.github.io/your-repo-name/`.
+**Pré-requisito:** o repositório precisa estar no GitHub e você precisa ter o `git` configurado localmente.
+
+**Passo 1 — Repositório no GitHub**
+
+O repositório já está disponível em: [github.com/carlos-george-neto/mylinkfolio](https://github.com/carlos-george-neto/mylinkfolio)
+
+Se ainda não tiver o remote configurado localmente:
+
+```bash
+git remote add origin https://github.com/carlos-george-neto/mylinkfolio.git
+git push -u origin main
+```
+
+**Passo 2 — Configure o `basePath` em `src/config.ts`**
+
+Abra `src/config.ts` e verifique que os campos `meta.basePath` e `meta.siteUrl` estão assim:
+
+```typescript
+meta: {
+  basePath: '/mylinkfolio/',
+  siteUrl:  'https://carlos-george-neto.github.io/mylinkfolio/',
+  // ...
+},
+```
+
+> Errar o `basePath` (nome do repositório ou ausência das barras) causa página em branco após o deploy.
+
+**Passo 4 — Execute o deploy**
+
+```bash
+npm run deploy
+```
+
+Esse comando executa `npm run build` e em seguida envia o conteúdo de `dist/` para a branch `gh-pages` automaticamente via `gh-pages`.
+
+**Passo 5 — Ative o GitHub Pages no repositório**
+
+1. Abra o repositório no GitHub.
+2. Vá em **Settings → Pages**.
+3. Em **Branch**, selecione `gh-pages` e a pasta `/ (root)`.
+4. Clique em **Save**.
+
+Aguarde cerca de 1 minuto. Sua página estará disponível em:
+
+```
+https://carlos-george-neto.github.io/mylinkfolio/
+```
+
+**Atualizações futuras**
+
+Para publicar uma nova versão após alterar `src/config.ts` ou qualquer outro arquivo, basta rodar novamente:
+
+```bash
+npm run deploy
+```
+
+---
 
 ### Vercel
 

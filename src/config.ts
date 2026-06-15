@@ -175,14 +175,14 @@ const config: SiteConfig = {
      * Used for the canonical link tag and structured data.
      * Example: 'https://yourname.github.io/mylinkfolio/'
      */
-    siteUrl: 'http://localhost:5173',
+    siteUrl: 'https://carlos-george-neto.github.io/mylinkfolio/',
 
     /**
      * Vite base path — only change this if deploying to a GitHub Pages project site.
      * GitHub Pages project site: set to '/your-repo-name/'
      * Root deployments (Vercel, Netlify, custom domain): keep as '/'
      */
-    basePath: '/',
+    basePath: '/mylinkfolio/',
 
     /**
      * (Optional) URL of your Open Graph preview image (shown when sharing on social media).
